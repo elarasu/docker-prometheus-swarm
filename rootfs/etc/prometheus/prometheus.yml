@@ -31,6 +31,13 @@ scrape_configs:
       type: 'A'
       port: 8080
 
+  - job_name: 'mongodb'
+    dns_sd_configs:
+    - names:
+      - 'tasks.mongodb'
+      type: 'A'
+      port: 9104
+
   - job_name: 'node-exporter'
     dns_sd_configs:
     - names:
